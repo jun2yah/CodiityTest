@@ -122,31 +122,24 @@ public class Solution {
      */
     public int solution3_3(int[] A) {
         // write your code in Java SE 8
-        int minDiff = 0;
+        int sumFront = 0;
+        int sumLast = 0;
 
-        int num1 = 0;
-        int num2 = 0;
+        for (int i: A) {
+            sumLast += i;
+        }
 
-        for (int i = 0; i < A.length; i++) {
-            for (int j = 0; j < i + 1; j++) {
-                num1 += A[j];
-            }
-            for (int k = i + 1; k < A.length; k++) {
-                num2 += A[k];
-            }
+        int minDiff = Integer.MAX_VALUE;
 
-            int diff = Math.abs(num1 - num2);
+        for (int i = 1; i < A.length; i++) {
+            sumFront += A[i - 1];
+            sumLast -= A[i - 1];
 
-            if (i == 0) {
+            int diff = Math.abs(sumFront - sumLast);
+
+            if (diff < minDiff) {
                 minDiff = diff;
-            } else {
-                if (minDiff > diff) {
-                    minDiff = diff;
-                }
             }
-
-            num1 = 0;
-            num2 = 0;
         }
 
         return minDiff;
