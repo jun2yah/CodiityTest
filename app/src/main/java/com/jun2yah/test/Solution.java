@@ -145,4 +145,41 @@ public class Solution {
         return minDiff;
     }
 
+    /**
+     * PermCheck
+     *
+     * @param A
+     * @return
+     */
+    public int solution4_1(int[] A) {
+        // write your code in Java SE 8
+        Set<Integer> num = new HashSet<>();
+
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] > A.length) {
+                return 0;
+            }
+
+            if (num.contains(A[i])) {
+                return 0;
+            }
+
+            num.add(A[i]);
+        }
+
+        return 1;
+    }
+
+    /**
+     * FrogRiverOne
+     *
+     * @param X
+     * @param A
+     * @return
+     */
+    public int solution(int X, int[] A) {
+        // write your code in Java SE 8
+
+        return 0;
+    }
 }
