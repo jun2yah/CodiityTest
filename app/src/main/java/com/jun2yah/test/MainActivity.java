@@ -31,5 +31,13 @@ public class MainActivity extends AppCompatActivity {
         int result3_3 = solution.solution3_3(new int[]{3, 1, 2, 4, 3});
         Log.d(TAG, "result3_3 = " + result3_3);
 
+        Sort sort = new Sort();
+
+        int[] sort1 = sort.bubbleSort(new int[]{5,3,8,1,6,2,7,4});
+
+        int[] sort2 = sort.selectionSort(new int[]{5,3,8,1,6,2,7,4});
+
+        int[] sort3 = sort.insertionSort(new int[]{5,3,8,1,6,2,7,4});
+
     }
 }
