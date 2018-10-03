@@ -19,6 +19,35 @@ public class MainActivity extends AppCompatActivity {
 
         Solution solution = new Solution();
 
+        int resultA = solution.solutionA("a0bb");
+        Log.d(TAG, "resultA = " + resultA);
+
+
+
+        int resultB = solution.solutionB(12345, 678);
+        Log.d(TAG, "resultB = " + resultB);
+
+        int resultC = solution.solutionC("(())");
+        Log.d(TAG, "resultC = " + resultC);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         int result1 = solution.solution1(561892);
         Log.d(TAG, "result1 = " + result1);
 
